@@ -1,4 +1,3 @@
-# hackerrank
-Hackerrank problems
+#HackerRank and LeetCode problems
 
-Collection of HackerRank problems I solved
+Collection of HackerRank and LeetCode problems I solved
