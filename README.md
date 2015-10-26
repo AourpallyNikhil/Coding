@@ -1,4 +1,4 @@
 # hackerrank
 Hackerrank problems
 
-Collection of Hackerank problems I solved
+Collection of HackerRank problems I solved
