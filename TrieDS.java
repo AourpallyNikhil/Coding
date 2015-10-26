@@ -1,6 +1,5 @@
 package test;
 
-
 public class TrieDS {
 	Trie root;
 	
