@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -107,7 +106,6 @@ public class SJF{
 		}
 		return min;	
 	}
-	
 	
 	public static void main(String[] args){
 		int[] startTime = {0,2,4,8};
