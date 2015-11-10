@@ -9,27 +9,29 @@ public class Mooshak {
 		}
 		static int SolveMazeUtil(int grid[][],int x,int y,int m,int n)
 		{
-		                if(x>=0 && x < m && y>=0 && y<n)
+			if(x>=0 && x < m && y>=0 && y < n)
 		                {                 
 		                                 if(grid[x][y]==9)
-		                                {
+		                                 {
 		                                                return 1;
-		                                }
+		                                 }
 
 		                                // Check if maze[x][y] is valid
 		                                if(grid[x][y] == 1)
 		                                {
-
+		                                				grid[x][y] = 0;
+		                                				if(SolveMazeUtil(grid, x, y-1, m,n) == 1)
+		                                								return 1;
 		                                                /* Move forward in x direction */
 		                                                if (SolveMazeUtil(grid, x+1, y, m,n) == 1)
 		                                                                return 1;                                             
 		                                                /* If moving in x direction doesn't give solution then
 		                                                                Move down in y direction  */
-		                                                if (SolveMazeUtil(grid, x, y+1, m,n) == 1)
-		                                                                return 1; 
-		                                                /* If none of the above movements work then BACKTRACK:
-		                                                                unmark x,y as part of solution path */
-		                                                                return 0;
+			                                             if (SolveMazeUtil(grid, x, y+1, m,n) == 1)
+			                                                            return 1; 
+			                                             if (SolveMazeUtil(grid, x-1, y, m,n) == 1)
+                                                             		    return 1; 
+		                                    return 0;
 		                                }    
 		                                return 0;
 		                }
@@ -39,11 +41,9 @@ public class Mooshak {
 
 
 	public static void main(String[] args){
-		int grid[][] = {{0,0,0},{9,1,1},{0,1,1}};
+		int grid[][] = {{1,1,1,1}, {1,0,0,0}, {1,0,9,0}, {1,0,0,0},{1,1,1,0}};
 		int m= grid.length;
 		int n = grid[0].length;
-		
-		
 		System.out.println(SolveMazeUtil(grid,0,0,m,n));
 		
 }
