@@ -1,3 +1,3 @@
-#HackerRank and LeetCode problems
+# Algorithmic problems
 
-Collection of HackerRank and LeetCode problems I solved
+Collection of general Algorithmic problems I solved
