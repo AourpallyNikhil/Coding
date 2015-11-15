@@ -19,18 +19,15 @@ public class Mooshak {
 		                                // Check if maze[x][y] is valid
 		                                if(grid[x][y] == 1)
 		                                {
-		                                				grid[x][y] = 0;
-		                                				if(SolveMazeUtil(grid, x, y-1, m,n) == 1)
-		                                								return 1;
-		                                                /* Move forward in x direction */
+		                                		grid[x][y] = 0;
+		                                		if(SolveMazeUtil(grid, x, y-1, m,n) == 1)
+		                                			return 1;
 		                                                if (SolveMazeUtil(grid, x+1, y, m,n) == 1)
-		                                                                return 1;                                             
-		                                                /* If moving in x direction doesn't give solution then
-		                                                                Move down in y direction  */
-			                                             if (SolveMazeUtil(grid, x, y+1, m,n) == 1)
-			                                                            return 1; 
-			                                             if (SolveMazeUtil(grid, x-1, y, m,n) == 1)
-                                                             		    return 1; 
+		                                                	return 1;                                           
+			                                        if (SolveMazeUtil(grid, x, y+1, m,n) == 1)
+			                                                return 1; 
+			                                        if (SolveMazeUtil(grid, x-1, y, m,n) == 1)
+                                                             		return 1; 
 		                                    return 0;
 		                                }    
 		                                return 0;
